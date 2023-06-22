@@ -47,6 +47,16 @@ gng = GrowingNeuralGas(data)
 gng.fit_network(e_b=0.1, e_n=0.006, a_max=10, l=200, a=0.5, d=0.995, passes=8, plot_evolution=True)
 ```
 
+__Params:__
+- `e_b`: Taxa de aprendizado para mover a unidade mais próxima do vetor de entrada durante o treinamento. Ou seja, esse parâmetro indica o quanto o nó vencedor irá se mover em direção aos dados.
+- `e_n`: Taxa de aprendizado para mover as unidades vizinhas da unidade mais próxima do vetor de entrada durante o treinamento. Ou seja, esse parâmetro ele indica o quanto os nós vizinhos do nós vencedor irão se mover em direção aos dados.
+- `a_max`: Idade máxima de uma conexão na rede neural. Se a idade de uma conexão entre unidades exceder a_max, ela será removida durante o treinamento.
+- `l`: Parâmetro que determina a frequência de criação de novas unidades durante o treinamento. A cada `l` iterações, uma nova unidade pode ser inserida na rede neural.
+- `a`: Fator de redução da variável de erro das unidades vizinhas durante a criação de novas unidades.
+- `d`: Fator de redução da variável de erro de todas as unidades após cada iteração do treinamento.
+- `passes`: Número de iterações completas sobre o conjunto de dados de treinamento.
+- `plot_evolution`: Um valor booleano que indica se a evolução da rede neural deve ser plotada após cada criação de unidade.
+
 ## Example
 
 Este exemplo mostra como você pode gerar um dataset sintético utilizando a bilbioteca do scikit-learn e treinar o modelo.
