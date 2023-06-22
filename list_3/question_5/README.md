@@ -25,7 +25,7 @@ Durante a execução do algoritmo GNG, ocorrem dois tipos de atualizações: atu
 À medida que o algoritmo progride, os nós menos importantes podem ser removidos do grafo com base em critérios pré-definidos, como a idade do nó (tempo desde a última atualização) ou a importância do nó em termos de erros acumulados. Isso permite que o grafo se adapte e seja capaz de lidar com mudanças na distribuição dos dados ao longo do tempo.
 
 
-## Hot to use
+## How to use
 
 Para executar este repositório, você pode criar um ambiente virtual utilizando o conda, por exemplo, com as bibliotecas do arquivo [environment.yml](./environment.yml) com o seguinte comando:
 
